@@ -90,17 +90,32 @@ inquirer.prompt([
     ]).then(answers => {
         
         // FOR GENERATING LICENSE DESCRIPTION OR BADGES:
-        
 
+        let licenseLink = "";
+        let licenseBadge = "";
 
-
+        switch (answers.license) {
+            case "Apache 2.0":
+                licenseLink = "<a href='https://opensource.org/licenses/Apache-2.0'>Apache 2.0</a>";
+                licenseBadge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+                break;
+            case "BSD-3":
+                licenseLink = "<a href='https://opensource.org/licenses/BSD-3-Clause'>Apache 2.0</a>";
+                licenseBadge = "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+                break;
+            case "BSD-2":
+                licenseLink = "<a href='https://opensource.org/licenses/BSD-2-Clause'>Apache 2.0</a>";
+                licenseBadge = "[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)";
+                break;
+                
+        }
 
 
         // title, description, table of contents (not user input), installation, usage, license (switch case setup), contributions, tests, github, email, questions
         // function that generates the markdown
         let markdownContent = 
 
-        `#${answers.title}
+        `#${answers.title} ${licenseBadge}
 
         ##<a id="description"></a>Description
         ${answers.description}
@@ -121,7 +136,9 @@ inquirer.prompt([
         ${answers.usage}
 
         ##<a id="license"></a>License
+        This project is covered under 
         ###${answers.License}
+        Please visit ${licenseLink} for more information on this License
 
         ##<a id="contribute"></a>Contributing
         ${answers.contributions}
@@ -137,7 +154,7 @@ inquirer.prompt([
         // depending on case switch need to add an icon and description for each license
 
         // write the file
-        fs.writeFile(`README2.md`, markdownContent, (err) => {
+        fs.writeFile(`TestREADME.md`, markdownContent, (err) => {
         err ? console.log(err) : console.log('No Errors Found')
         } )
 
