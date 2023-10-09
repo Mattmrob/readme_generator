@@ -89,7 +89,24 @@ inquirer.prompt([
     },
     ]).then(answers => {
         
-        console.log(answers.title)
+        // title, description, table of contents (not user input), installation, usage, license (switch case setup), contributions, tests, github, email, questions
+        // function that generates the markdown
+        let markdownContent = 
+
+        `#${answers.title}
+
+        ##<a id="description"></a>Description
+        ${answers.description}
+
+        ##Table of Contents
+        <a id="description /a>
+        <a href="#description">Description</a>
+        `;
+
+        fs.writeFile(`README2.md`, markdownContent, (err) => {
+        err ? console.log(err) : console.log('No Errors Found')
+        } )
+
 
 
         // const generate = require('./utils/generateMarkdown')
