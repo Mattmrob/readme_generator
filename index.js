@@ -75,7 +75,7 @@ inquirer.prompt([
     {
         type: "input",
         name: "github",
-        message: "Please enter your github profile, this will be added to the Questions section of the readme."
+        message: "Please enter your github profile name, this will be added to the Questions section of the readme."
     },
     {
         type: "input",
@@ -89,6 +89,13 @@ inquirer.prompt([
     },
     ]).then(answers => {
         
+        // FOR GENERATING LICENSE DESCRIPTION OR BADGES:
+        
+
+
+
+
+
         // title, description, table of contents (not user input), installation, usage, license (switch case setup), contributions, tests, github, email, questions
         // function that generates the markdown
         let markdownContent = 
@@ -124,6 +131,8 @@ inquirer.prompt([
 
         ##<a id="questions"></a>Questions
         ${answers.questions}
+        Github: <a href="github.com/${answers.github}">${answers.github}</a>
+        Email: ${answers.email}
         `;
         // depending on case switch need to add an icon and description for each license
 
