@@ -1,34 +1,33 @@
-# Testing [![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
+# Flying Dogs [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 ## <a id="description"></a>Description
-1
+A place to see flying dogs!
 
-##Table of Contents
-<a href="#description">Description</a>
-<a href="#installation">Installation</a>
-<a href="#usage">Usage</a>
-<a href="#license">License</a>
-<a href="#contribute">Contributing</a>
-<a href="#tests">Tests</a>
-<a href="#questions">Questions</a>
+## Table of Contents <br>
+<a href="#description">Description</a> <br>
+<a href="#installation">Installation</a> <br>
+<a href="#usage">Usage</a> <br>
+<a href="#license">License</a> <br>
+<a href="#contribute">Contributing</a> <br>
+<a href="#tests">Tests</a> <br>
+<a href="#questions">Questions</a> <br>
 
 ## <a id="installation"></a>Installation
-2
+To install the project, please download the correct files from my repo
 
 ## <a id="usage"></a>Usage
-3
+Click on the exe file and watch dogs fly!
 
 ## <a id="license"></a>License
-This project is covered under 
-###undefined
-Please visit <a href='https://opensource.org/licenses/BSD-2-Clause'>BSD-2</a> for more information on this License
+This project is covered under undefined <br>
+Please visit <a href='https://opensource.org/licenses/BSD-3-Clause'>BSD-3</a> for more information on this License
 
 ## <a id="contribute"></a>Contributing
-4
+Send me your dog flying and I will add it to the site!
 
 ## <a id="tests"></a>Tests
-5
+Trying using jest to make sure the correct dog pool sample is pulled
 
 ## <a id="questions"></a>Questions
-8
-Github: <a href="github.com/6">6</a>
-Email: 7
+Please contact me about dogs! <br>
+Github: <a href="github.com/Dogwatcher">Dogwatcher</a> <br>
+Email: dogman@dog.com

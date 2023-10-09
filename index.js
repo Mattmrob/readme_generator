@@ -119,14 +119,14 @@ inquirer.prompt([
 ## <a id="description"></a>Description
 ${answers.description}
 
-##Table of Contents
-<a href="#description">Description</a>
-<a href="#installation">Installation</a>
-<a href="#usage">Usage</a>
-<a href="#license">License</a>
-<a href="#contribute">Contributing</a>
-<a href="#tests">Tests</a>
-<a href="#questions">Questions</a>
+## Table of Contents <br>
+<a href="#description">Description</a> <br>
+<a href="#installation">Installation</a> <br>
+<a href="#usage">Usage</a> <br>
+<a href="#license">License</a> <br>
+<a href="#contribute">Contributing</a> <br>
+<a href="#tests">Tests</a> <br>
+<a href="#questions">Questions</a> <br>
 
 ## <a id="installation"></a>Installation
 ${answers.installation}
@@ -135,8 +135,7 @@ ${answers.installation}
 ${answers.usage}
 
 ## <a id="license"></a>License
-This project is covered under 
-###${answers.License}
+This project is covered under ${answers.License} <br>
 Please visit ${licenseLink} for more information on this License
 
 ## <a id="contribute"></a>Contributing
@@ -146,8 +145,8 @@ ${answers.contributions}
 ${answers.tests}
 
 ## <a id="questions"></a>Questions
-${answers.questions}
-Github: <a href="github.com/${answers.github}">${answers.github}</a>
+${answers.questions} <br>
+Github: <a href="github.com/${answers.github}">${answers.github}</a> <br>
 Email: ${answers.email}
 `;
         // depending on case switch need to add an icon and description for each license
