@@ -1,14 +1,25 @@
+// adding required packages and importing code
 const inquirer = require('inquirer');
 const fs = require('fs');
+import generateMarkdown from './utils/generateMarkdown';
 
-// TODO: Create an array of questions for user input
-const questions = [];
+// inquirer prompts
+inquirer.prompt([
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-function init() {}
+    
+])
 
-// Function call to initialize app
-init();
+
+// Function that writes readme using answered inquirer prompts
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, callback())
+}
+
+// initialization function
+function init() {
+    writeToFile();
+}
+
+// calling init function
+// init();
