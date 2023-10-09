@@ -100,11 +100,11 @@ inquirer.prompt([
                 licenseBadge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
                 break;
             case "BSD-3":
-                licenseLink = "<a href='https://opensource.org/licenses/BSD-3-Clause'>Apache 2.0</a>";
+                licenseLink = "<a href='https://opensource.org/licenses/BSD-3-Clause'>BSD-3</a>";
                 licenseBadge = "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
                 break;
             case "BSD-2":
-                licenseLink = "<a href='https://opensource.org/licenses/BSD-2-Clause'>Apache 2.0</a>";
+                licenseLink = "<a href='https://opensource.org/licenses/BSD-2-Clause'>BSD-2</a>";
                 licenseBadge = "[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)";
                 break;
                 
@@ -115,42 +115,41 @@ inquirer.prompt([
         // function that generates the markdown
         let markdownContent = 
 
-        `#${answers.title} ${licenseBadge}
+        `# ${answers.title} ${licenseBadge}
+## <a id="description"></a>Description
+${answers.description}
 
-        ##<a id="description"></a>Description
-        ${answers.description}
+##Table of Contents
+<a href="#description">Description</a>
+<a href="#installation">Installation</a>
+<a href="#usage">Usage</a>
+<a href="#license">License</a>
+<a href="#contribute">Contributing</a>
+<a href="#tests">Tests</a>
+<a href="#questions">Questions</a>
 
-        ##Table of Contents
-        <a href="#description">Description</a>
-        <a href="#installation">Installation</a>
-        <a href="#usage">Usage</a>
-        <a href="#license">License</a>
-        <a href="#contribute">Contributing</a>
-        <a href="#tests">Tests</a>
-        <a href="#questions">Questions</a>
+## <a id="installation"></a>Installation
+${answers.installation}
 
-        ##<a id="installation"></a>Installation
-        ${answers.installation}
+## <a id="usage"></a>Usage
+${answers.usage}
 
-        ##<a id="usage"></a>Usage
-        ${answers.usage}
+## <a id="license"></a>License
+This project is covered under 
+###${answers.License}
+Please visit ${licenseLink} for more information on this License
 
-        ##<a id="license"></a>License
-        This project is covered under 
-        ###${answers.License}
-        Please visit ${licenseLink} for more information on this License
+## <a id="contribute"></a>Contributing
+${answers.contributions}
 
-        ##<a id="contribute"></a>Contributing
-        ${answers.contributions}
+## <a id="tests"></a>Tests
+${answers.tests}
 
-        ##<a id="tests"></a>Tests
-        ${answers.tests}
-
-        ##<a id="questions"></a>Questions
-        ${answers.questions}
-        Github: <a href="github.com/${answers.github}">${answers.github}</a>
-        Email: ${answers.email}
-        `;
+## <a id="questions"></a>Questions
+${answers.questions}
+Github: <a href="github.com/${answers.github}">${answers.github}</a>
+Email: ${answers.email}
+`;
         // depending on case switch need to add an icon and description for each license
 
         // write the file
