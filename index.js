@@ -1,9 +1,9 @@
 // adding required packages and importing code
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generate = require('./utils/generateMarkdown')
 
-let readmeInput = {};
+// ------------- MAIN INITILIZATION FUNCTION ----------------
+const init = () => {
 
 // inquirer prompts
 // WE NEED: Title, Description, Table of Contents (with clickable links - NOT USER INPUT), Installation
@@ -74,11 +74,6 @@ inquirer.prompt([
     },
     {
         type: "input",
-        name: "tests",
-        message: "How should users perform tests on this project?"
-    },
-    {
-        type: "input",
         name: "github",
         message: "Please enter your github profile, this will be added to the Questions section of the readme."
     },
@@ -92,25 +87,23 @@ inquirer.prompt([
         name: "questions",
         message: "Please include a message for the Questions section on how to contact you, this will appear with your github profile and email."
     },
-]).then(answers => {
-    // write answers into pre-existing empty object
-    readmeInput = answers;
-    console.log("This is a test", readmeInput);
+    ]).then(answers => {
+        
+        console.log(answers.title)
 
-    // use answers to generate readme content
-    generate.generateMarkdown(readmeInput);
-})
+
+        // const generate = require('./utils/generateMarkdown')
+        // // Need to use answers to generate README markdown content
+        // generate.generateMarkdown(answers);
+    })
+
+}
 
 
 // writes readme file using generated readme content
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, callback())
-}
+// function writeToFile(fileName, data) {
+//     fs.writeFile(fileName, data, callback())
+// }
 
-// initialization function
-function init() {
-    writeToFile();
-}
-
-// // calling init function
-// // init();
+// calling init function
+init();
