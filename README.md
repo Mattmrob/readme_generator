@@ -18,7 +18,7 @@ Once all questions are answered, a README.md will be generated with the user's s
 
 ## Credits
 
-List of Licenses and MD badges from https://gist.github.com/kofiav/c1059e1075b67582e86b07aa9759e20d by user kofiav
+List of Licenses and MD badges from https://gist.github.com/kofiav/c1059e1075b67582e86b07aa9759e20d by user kofiav <br>
 Starter code from UC Berkely
 
 ## License
