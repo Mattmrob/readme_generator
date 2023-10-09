@@ -1,4 +1,4 @@
-#Create a Dog Project [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+# Create a Dog Project [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
         ##<a id="description"></a>Description
         Activate the button to create your very own dog! Wow!
