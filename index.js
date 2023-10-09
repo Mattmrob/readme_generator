@@ -99,10 +99,35 @@ inquirer.prompt([
         ${answers.description}
 
         ##Table of Contents
-        <a id="description /a>
         <a href="#description">Description</a>
-        `;
+        <a href="#installation">Installation</a>
+        <a href="#usage">Usage</a>
+        <a href="#license">License</a>
+        <a href="#contribute">Contributing</a>
+        <a href="#tests">Tests</a>
+        <a href="#questions">Questions</a>
 
+        ##<a id="installation"></a>Installation
+        ${answers.installation}
+
+        ##<a id="usage"></a>Usage
+        ${answers.usage}
+
+        ##<a id="license"></a>License
+        ###${answers.License}
+
+        ##<a id="contribute"></a>Contributing
+        ${answers.contributions}
+
+        ##<a id="tests"></a>Tests
+        ${answers.tests}
+
+        ##<a id="questions"></a>Questions
+        ${answers.questions}
+        `;
+        // depending on case switch need to add an icon and description for each license
+
+        // write the file
         fs.writeFile(`README2.md`, markdownContent, (err) => {
         err ? console.log(err) : console.log('No Errors Found')
         } )
