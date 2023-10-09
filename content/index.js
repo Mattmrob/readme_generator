@@ -3,10 +3,11 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // ------------- MAIN INITILIZATION FUNCTION ----------------
+
 const init = () => {
 
 // inquirer prompts
-// WE NEED: Title, Description, Table of Contents (with clickable links - NOT USER INPUT), Installation
+// FOR: Title, Description, Table of Contents (with clickable links - NOT USER INPUT), Installation
 // Usage, License, Contributing, Tests, and Questions
 
 inquirer.prompt([
@@ -194,11 +195,10 @@ inquirer.prompt([
         }
 
 
-        // title, description, table of contents (not user input), installation, usage, license (switch case setup), contributions, tests, github, email, questions
-        // function that generates the markdown
-        let markdownContent = 
+// function that generates the markdown
+let markdownContent = 
 
-        `# ${answers.title} ${licenseBadge}
+`# ${answers.title} ${licenseBadge}
 ## <a id="description"></a>Description
 ${answers.description}
 
@@ -229,30 +229,17 @@ ${answers.tests}
 
 ## <a id="questions"></a>Questions
 ${answers.questions} <br>
-Github: <a href="github.com/${answers.github}">${answers.github}</a> <br>
+Github: <a href="github.com/${answers.github}/">${answers.github}</a> <br>
 Email: ${answers.email}
 `;
-        // depending on case switch need to add an icon and description for each license
-
-        // write the file
-        fs.writeFile(`TestREADME.md`, markdownContent, (err) => {
+    
+        // Write the readme using fs
+        fs.writeFile(`README.md`, markdownContent, (err) => {
         err ? console.log(err) : console.log('No Errors Found')
-        } )
+        })
 
-
-
-        // const generate = require('./utils/generateMarkdown')
-        // // Need to use answers to generate README markdown content
-        // generate.generateMarkdown(answers);
     })
 
 }
 
-
-// writes readme file using generated readme content
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, data, callback())
-// }
-
-// calling init function
 init();
