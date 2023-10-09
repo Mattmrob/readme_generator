@@ -1,6 +1,7 @@
 // adding required packages and importing code
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generate = require('./utils/generateMarkdown')
 
 let readmeInput = {};
 
@@ -59,6 +60,7 @@ inquirer.prompt([
             "The Artistic License 2.0",
             "The zlib/libpng License",
         ]
+        // List of Licenses and MD badges from https://gist.github.com/kofiav/c1059e1075b67582e86b07aa9759e20d
     },
     {
         type: "input",
@@ -91,22 +93,24 @@ inquirer.prompt([
         message: "Please include a message for the Questions section on how to contact you, this will appear with your github profile and email."
     },
 ]).then(answers => {
+    // write answers into pre-existing empty object
     readmeInput = answers;
     console.log("This is a test", readmeInput);
+
+    // use answers to generate readme content
+    generate.generateMarkdown(readmeInput);
 })
-// List of Licenses and MD badges from https://gist.github.com/kofiav/c1059e1075b67582e86b07aa9759e20d
 
 
+// writes readme file using generated readme content
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, callback())
+}
 
-// // Function that writes readme using answered inquirer prompts
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, data, callback())
-// }
-
-// // initialization function
-// function init() {
-//     writeToFile();
-// }
+// initialization function
+function init() {
+    writeToFile();
+}
 
 // // calling init function
 // // init();
